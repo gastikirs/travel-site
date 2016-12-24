@@ -1,0 +1,58 @@
+---GULP---
+Para tener plugins hay que instlarlos via NPM y luego requerirlos en el gulpfile
+postcss = require('gulp-postcss'); //Ejemplo
+
+
+gulp.src() : de donde van a partir los archivos a modificar
+
+gulp.dest() : a donde van a ir los archivos modificados
+
+gulp.pipe() : agrego "filtros" por los que va a pasar desde SRC a DEST. Ejemplo, puedo pasarlo por un pipe
+de PostCSS.
+
+--HTML & CSS---
+
+BEM:
+	Bloque (Parte independiente y reusable del disenio)
+	Elemento (Elemento que depende del bloque y solo es usado dentro del bloque)
+	Modificador (Puede ser usado para cambiar el estado de un objeto)
+
+
+Centrar texto en el centro de un div horizontalmente y verticalmente:
+	Horizontal: agrego al div contenedor width 100% y text-align center
+	Vertical: al div contenedor: top: 50%, transform: translateY(-50%); 
+
+Redondear una imagen:
+		border-radius: Xpx;
+		overflow: hidden;
+		width: 2Xpx;
+		height: 2Xpx;
+
+
+---JS---
+Babel: Sirve para que el standard ECMAScript 6 pueda ser utilizado en el ambiente de desarrollo. 
+Se puede escribir en ES6 (tambien llamado ECMAScript 2015) y babel convertira el codigo en ES5 para que sea compatible con todos los navegadores.
+Hay que instalarlo via npm
+	$ npm install babel-core babel-loader babel-preset-es2015 --save-dev
+El loader 'babel' se usa via webpack. (ver archivo webpack.config.js)
+ES6 introduce 'clases' 'constructores' al estilo java.
+
+Puedo definir una clase con constructor y sus metodos
+class Persona {
+	constructor(arg) {}
+
+	metodo1(arg){}
+}
+
+Tmb nos permite herencia de forma facil
+
+class Adulto extends Person {
+	
+}
+
+Tmb para importar un modulo no hace falta declararlo en una variable. Simplemente se puede escribir 
+
+import Person from 'pathCorrespondiente' o tambien
+import $ from 'jquery'; //Para poder hacer esto deberia estar instalado via npm
+
+Y para exportar se reemplazo module.exports = nombreClase; por export default nombreClase
