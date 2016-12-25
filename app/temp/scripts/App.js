@@ -10396,7 +10396,7 @@
 							// //Que queremos que pase cuando se scrollea a ese elemento
 							(0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
 						},
-						offset: that.offsetPercentage //Eligo cuando se ejecuta el handler
+						offset: that.offsetPercentage //Elijo cuando se ejecuta el handler
 					}); //Creo un waypoint por cada elemento
 				});
 			}
