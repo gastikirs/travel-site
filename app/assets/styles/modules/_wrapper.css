@@ -19,6 +19,10 @@
 
 	}
 
+	&--narrow {
+		max-width: 470px;
+	}
+
 	.wrapper {
 		padding-left: 0px;
 		padding-right: 0px;
